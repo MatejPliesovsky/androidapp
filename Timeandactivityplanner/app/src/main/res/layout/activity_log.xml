@@ -68,17 +68,22 @@
                 android:layout_height="40dp"
                 android:hint="Username"
                 android:background="#f3f3f3"
-                android:textColor="#f3f3f3"
+                android:textColor="#000000"
                 android:paddingLeft="5dp"
                 android:layout_marginTop="30dp"/>
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:hint="password"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:hint="Password"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3" />
 
             <LinearLayout
                 android:layout_marginTop="10dp"
