@@ -14,6 +14,9 @@ public class ChooseActivity extends AppCompatActivity {
     private Button btnProfile;
     private Button btnActivities;
 
+    public ChooseActivity(){
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

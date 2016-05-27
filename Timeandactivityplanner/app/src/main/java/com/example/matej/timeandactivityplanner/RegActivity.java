@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 // Registration activity set registration and save users
 public class RegActivity extends AppCompatActivity {
@@ -27,7 +25,7 @@ public class RegActivity extends AppCompatActivity {
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegActivity.this,LogActivity.class);
+                Intent intent = new Intent(RegActivity.this,FBLoginActivity.class);
                 startActivity(intent);
             }
         });

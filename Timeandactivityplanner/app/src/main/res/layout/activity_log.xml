@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.example.matej.timeandactivityplanner.LogActivity">
+    tools:context=".FBLoginActivity">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
@@ -136,7 +136,13 @@
                 android:textSize="13dp"
                 android:background="#EF6C00"/>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fragmentis">
 
+            </RelativeLayout>
         </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>
