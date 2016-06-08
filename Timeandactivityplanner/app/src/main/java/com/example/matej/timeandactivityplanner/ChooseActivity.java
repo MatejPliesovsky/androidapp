@@ -3,8 +3,10 @@ package com.example.matej.timeandactivityplanner;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 // this is menu where u can choose activity
 public class ChooseActivity extends AppCompatActivity {
@@ -13,6 +15,7 @@ public class ChooseActivity extends AppCompatActivity {
     private Button btnWeather;
     private Button btnProfile;
     private Button btnActivities;
+    private Boolean exit = false;
 
     public ChooseActivity(){
 
@@ -51,6 +54,24 @@ public class ChooseActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed(){
+        if(exit){
+            System.exit(0);
+        }
+        else {
+            Toast.makeText(this, "Tap again to exit", Toast.LENGTH_SHORT).show();
+            exit = true;
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run(){
+                    exit = false;
+                }
+            }, 3000);
+        }
     }
 }
 

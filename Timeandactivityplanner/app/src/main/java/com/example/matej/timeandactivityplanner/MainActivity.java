@@ -14,20 +14,20 @@ import android.widget.ProgressBar;
 // this is main activity of project
 public class MainActivity extends AppCompatActivity {
 
-    private Handler handler;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new Handler().postDelayed(new Runnable(){
+        /*ProgressBar progress = (ProgressBar)findViewById(R.id.progress_bar);
+        progress.getIndeterminateDrawable().setColorFilter(0xFF9900, PorterDuff.Mode.SRC_IN);*/
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 Intent i = new Intent(MainActivity.this, ChooseActivity.class);
                 startActivity(i);
+                finish();
             }
         }, 5000);
     }
