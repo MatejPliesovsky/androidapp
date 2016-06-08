@@ -51,23 +51,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"
-            android:id="@+id/btnProfile"
-            android:layout_below="@+id/btnWeather"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Settings"
             android:id="@+id/btnActivities"
-            android:layout_below="@+id/btnProfile"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnWeather" />
     </RelativeLayout>
 </RelativeLayout>

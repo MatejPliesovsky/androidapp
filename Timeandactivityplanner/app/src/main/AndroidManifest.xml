@@ -29,7 +29,6 @@
         <activity android:name=".WeatherActivity" />
         <activity android:name=".ChooseActivity" />
         <activity android:name=".WarningAlarmActivity" />
-        <activity android:name=".ProfileActivity"></activity>
         <activity
             android:name=".FBLoginActivity"
             android:theme="@style/AppTheme.NoActionBar">

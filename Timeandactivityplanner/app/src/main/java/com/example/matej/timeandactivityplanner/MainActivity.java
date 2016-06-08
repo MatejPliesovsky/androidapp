@@ -2,16 +2,19 @@ package com.example.matej.timeandactivityplanner;
 
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 // this is main activity of project
 public class MainActivity extends AppCompatActivity {
 
-    private Button button1;
-    private Button button2;
+    private Handler handler;
 
 
 
@@ -19,33 +22,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addListenerOnButton();
-        addListenerOnButton2();
 
-
-    }
-    private void addListenerOnButton() {
-
-        button1 = (Button) findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable(){
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FBLoginActivity.class);
-                startActivity(intent);
+            public void run(){
+                Intent i = new Intent(MainActivity.this, ChooseActivity.class);
+                startActivity(i);
             }
-        });
+        }, 5000);
     }
-    private void addListenerOnButton2() {
-        button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RegActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
 }
 
 

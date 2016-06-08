@@ -42,14 +42,6 @@ public class ChooseActivity extends AppCompatActivity {
             }
         });
 
-        btnProfile = (Button) findViewById(R.id.btnProfile);
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ChooseActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
-        });
 
         btnActivities = (Button) findViewById(R.id.btnActivities);
         btnActivities.setOnClickListener(new View.OnClickListener() {
