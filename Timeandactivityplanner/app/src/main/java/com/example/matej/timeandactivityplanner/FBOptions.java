@@ -9,28 +9,27 @@ import android.widget.Button;
 import android.widget.Toast;
 
 // this is menu where u can choose activity
-public class ChooseActivity extends AppCompatActivity {
+public class FBOptions extends AppCompatActivity {
 
     private Button btnCalendar;
     private Button btnWeather;
-    private Button btnProfile;
-    private Button btnActivities;
+    private Button btnNotes;
     private Boolean exit = false;
 
-    public ChooseActivity(){
+    public FBOptions(){
 
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose);
+        setContentView(R.layout.activity_fboptions);
 
 
         btnWeather = (Button) findViewById(R.id.btnWeather);
         btnWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent intent = new Intent(ChooseActivity.this, WeatherActivity.class);
+                final Intent intent = new Intent(FBOptions.this, WeatherActivity.class);
                 startActivity(intent);
             }
         });
@@ -40,17 +39,17 @@ public class ChooseActivity extends AppCompatActivity {
         btnCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseActivity.this, Calendar.class);
+                Intent intent = new Intent(FBOptions.this, Calendar.class);
                 startActivity(intent);
             }
         });
 
 
-        btnActivities = (Button) findViewById(R.id.btnActivities);
-        btnActivities.setOnClickListener(new View.OnClickListener() {
+        btnNotes = (Button) findViewById(R.id.btnNotes);
+        btnNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseActivity.this, WarningAlarmActivity.class);
+                Intent intent = new Intent(FBOptions.this, NoteActivity.class);
                 startActivity(intent);
             }
         });

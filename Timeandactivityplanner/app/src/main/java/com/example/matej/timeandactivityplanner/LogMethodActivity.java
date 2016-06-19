@@ -1,41 +1,30 @@
 package com.example.matej.timeandactivityplanner;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
-// from this method u can login in and login out
-public class LogActivity extends AppCompatActivity {
+
+public class LogMethodActivity extends AppCompatActivity {
 
     private Button Subbut;
+
+    public LogMethodActivity(){
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        setContentView(R.layout.activity_log);
+        setContentView(R.layout.activity_log_method);
         addListenerOnButton3();
+        addFbFragment();
 
-
-        TextView reg = (TextView) findViewById(R.id.reg);
-        reg.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Intent nxt = new Intent(LogActivity.this, RegActivity.class);
-                startActivity(nxt);
-            }
-        });
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void addListenerOnButton3() {
@@ -43,7 +32,7 @@ public class LogActivity extends AppCompatActivity {
         Subbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mm = new Intent(LogActivity.this,ChooseActivity.class);
+                Intent mm = new Intent(LogMethodActivity.this, WithoutFBOptions.class);
                 startActivity(mm);
             }
         });
@@ -55,5 +44,11 @@ public class LogActivity extends AppCompatActivity {
         return true;
     }
 
+    public void addFbFragment() {
+        Fragment newFragment = new FBLoginFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.add(R.id.fragmentis, newFragment);
+        transaction.commit();
+    }
 
 }

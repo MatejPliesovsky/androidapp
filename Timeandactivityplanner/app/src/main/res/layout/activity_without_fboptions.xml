@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ChooseActivity">
+    tools:context="com.example.matej.timeandactivityplanner.WithoutFBOptions">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,34 +29,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calendar"
+            android:width="250dp"
             android:id="@+id/btnCalendar"
+            android:layout_marginTop="98dp"
             android:layout_below="@+id/textView2"
-            android:layout_marginTop="97dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weather"
-            android:id="@+id/btnWeather"
+            android:text="Notes"
+            android:width="250dp"
+            android:id="@+id/btnNotes"
             android:layout_below="@+id/btnCalendar"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignLeft="@+id/btnCalendar"
+            android:layout_alignStart="@+id/btnCalendar" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Settings"
-            android:id="@+id/btnActivities"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btnWeather" />
     </RelativeLayout>
 </RelativeLayout>

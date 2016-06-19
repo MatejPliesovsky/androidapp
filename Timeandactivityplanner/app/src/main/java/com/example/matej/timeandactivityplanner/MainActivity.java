@@ -1,15 +1,14 @@
 package com.example.matej.timeandactivityplanner;
 
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 
 // this is main activity of project
 public class MainActivity extends AppCompatActivity {
@@ -18,18 +17,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        addListenerOnButton();
 
-        /*ProgressBar progress = (ProgressBar)findViewById(R.id.progress_bar);
-        progress.getIndeterminateDrawable().setColorFilter(0xFF9900, PorterDuff.Mode.SRC_IN);*/
+    }
+    private void addListenerOnButton() {
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this, ChooseActivity.class);
+                Intent i = new Intent(MainActivity.this, LogMethodActivity.class);
                 startActivity(i);
                 finish();
             }
-        }, 5000);
+        }, 2500);
     }
 }
 

@@ -43,7 +43,7 @@ public class FBLoginFragment extends Fragment {
             Profile profile = Profile.getCurrentProfile();
             if(profile!=null){
                 mTextDetails.setText("Welcome to Facebook " + profile.getName());
-                Intent mm = new Intent(getActivity(), ChooseActivity.class);
+                Intent mm = new Intent(getActivity(), FBOptions.class);
                 startActivity(mm);
             }
         }
@@ -58,8 +58,6 @@ public class FBLoginFragment extends Fragment {
 
         }
     };
-
-
 
     public static FBLoginFragment newInstance(String param1, String param2) {
         FBLoginFragment fragment = new FBLoginFragment();
@@ -119,7 +117,6 @@ public class FBLoginFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }
-
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

@@ -15,7 +15,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -24,15 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegActivity" />
         <activity android:name=".Calendar" />
         <activity android:name=".WeatherActivity" />
-        <activity android:name=".ChooseActivity" />
-        <activity android:name=".WarningAlarmActivity" />
-        <activity
-            android:name=".FBLoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+        <activity android:name=".FBOptions" />
+        <activity android:name=".NoteActivity" />
+        <activity android:name=".LogMethodActivity" />
+        <activity android:name=".WithoutFBOptions"></activity>
     </application>
 
 </manifest>

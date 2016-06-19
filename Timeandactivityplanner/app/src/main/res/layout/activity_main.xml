@@ -19,6 +19,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView"
+        android:id="@+id/relativeLayout">
 
         <ImageView
             android:layout_width="200dp"
@@ -28,11 +33,12 @@
             android:foregroundGravity=""
             android:layout_alignWithParentIfMissing="true"
             android:layout_alignParentTop="true"
-            android:layout_above="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -45,6 +51,5 @@
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/progress"
         />
-
 
 </RelativeLayout>

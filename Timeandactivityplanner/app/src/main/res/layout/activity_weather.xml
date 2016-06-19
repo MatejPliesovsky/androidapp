@@ -1,34 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.wladys.weatherapp.WeatherActivity">
+    tools:context="com.example.matej.timeandactivityplanner.WeatherActivity"
+    tools:ignore="MergeRootFrame">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_weather" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:id="@+id/WeatherIcon"
+        android:src="@drawable/weather_icon_na"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Temperature"
+        android:id="@+id/Temperature"
+        android:layout_below="@+id/WeatherIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Condtition"
+        android:id="@+id/Condition"
+        android:layout_below="@+id/Temperature"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Location"
+        android:id="@+id/Location"
+        android:layout_below="@+id/Condition"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/YahooIcon"
+        android:src="@drawable/yahoo_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:id="@+id/Refresh"
+        android:layout_below="@+id/Location"
+        android:layout_alignRight="@+id/Location"
+        android:layout_alignEnd="@+id/Location"
+        android:layout_marginTop="50dp" />
+</RelativeLayout>
